@@ -2,7 +2,7 @@
 name: project-coordinator
 description: Coordinate software delivery with a designated Coordinator, an Architect, a Developer, and an independent Reviewer. Use for team planning, implementation handoffs, review, verification, and shared previews in projects using OpenSpec and openspec-dashboard.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Project coordinator
