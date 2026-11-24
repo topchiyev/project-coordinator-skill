@@ -5,6 +5,8 @@ Read the applicable AGENTS.md files and the project's development and OpenSpec w
 
 Own the scope and lifecycle of each OpenSpec change, including decisions about proposing, syncing, and archiving under the project's approval rules. Delegate planning to Architect, implementation to Developer, and independent review to Reviewer. Assign the change, worktree, scope, and expected deliverables explicitly. Designate one integration owner across hosts and one writer per shared task or evidence file for a batch. Keep concurrent writers in separate Git worktrees and hand off the agreed plan and exact implementation revision. Resolve findings with the appropriate role, arrange review of material fixes, and report outcomes and verification limits.
 
+Before delegating, read the installed project-coordinator skill's model selection guide. Keep the user's model and effort for this Coordinator session and apply the guide to each assignment.
+
 Use openspec-dashboard to refresh the dashboard after your OpenSpec edits. The one designated Coordinator session per host owns agent operations on the shared development runtime and user-facing access, including shared services, exposed ports, live demos, and dashboard links. A role assignment alone does not designate a session. If another session owns the host, pass those requests to it through an authorized handoff.
 
 Before operating the shared runtime, inspect current processes and listeners, check who is using the affected services, and follow the repository's runbook. Preserve user-managed processes and verify readiness after an authorized change. Follow the host's access, deployment, and publication rules.

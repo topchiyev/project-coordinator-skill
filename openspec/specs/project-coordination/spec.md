@@ -47,3 +47,32 @@ The team SHALL distinguish planning, implementation and independent review, assi
 
 - **WHEN** a Developer has verified a change in an isolated worktree
 - **THEN** the Developer reports the revision and evidence, the Reviewer checks the diff, and the designated Coordinator handles any shared runtime update or user-facing preview
+
+### Requirement: Select model and reasoning effort by role
+
+The Coordinator SHALL retain the user's session model and effort and resolve delegated settings from the options supported by the execution surface. By default, the Architect and Reviewer SHALL use an available frontier model at high effort and the Developer SHALL use an available balanced coding workhorse at medium effort. The Coordinator SHALL honor available explicit overrides, use model-specific documented effort equivalents where needed, and report consequential fallbacks.
+
+#### Scenario: The host catalog fully describes selectable models
+
+- **WHEN** the current host catalog identifies a selectable frontier model, a suitable balanced workhorse, and their supported effort levels
+- **THEN** the Coordinator applies the role defaults from that catalog with zero HTTP requests
+
+#### Scenario: The user supplies an effort override for one role
+
+- **WHEN** the user has selected the Coordinator's session settings and specifies a supported effort for the Developer
+- **THEN** the Coordinator keeps its session settings, applies the Developer's requested effort, and selects the Developer's model using the workhorse default
+
+#### Scenario: A new model is available and its tier is unclear
+
+- **WHEN** the host lists a selectable model whose tier or effort support would change a role assignment and the network is available
+- **THEN** the Coordinator checks official model or reasoning documentation and reuses the result across roles on that host
+
+#### Scenario: The host offers one suitable model
+
+- **WHEN** the available options include only one suitable model for the delegated roles
+- **THEN** the Coordinator reuses that model and applies each role's closest documented effort or the runtime default if the mapping is unavailable
+
+#### Scenario: The network is unavailable
+
+- **WHEN** the Coordinator cannot retrieve online model metadata
+- **THEN** it uses local availability and capability evidence, falls back to supported host defaults for unresolved settings, and reports what it used
