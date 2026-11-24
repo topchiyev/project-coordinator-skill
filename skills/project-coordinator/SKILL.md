@@ -1,11 +1,17 @@
 ---
 name: project-coordinator
 description: Coordinate software delivery with a designated Coordinator, an Architect, a Developer, and an independent Reviewer. Use for team planning, implementation handoffs, review, verification, and shared previews in projects using OpenSpec and openspec-dashboard.
+metadata:
+  version: "0.1.0"
 ---
 
 # Project coordinator
 
 Use the designated Coordinator conversation as the entry point on each development host. Keep decisions and progress in the repository so a new conversation or another machine can resume from the same evidence.
+
+## Install this skill
+
+When asked to install this skill, copy the complete skill folder into the current or named agent's project skills directory at the target repository root by default. Follow an explicit request for another scope. If the target repository, agent, or scope remains unclear after checking the request and workspace, ask the user before installing. Confirm the agent can discover the skill in the target project.
 
 ## Pick up a request
 
@@ -23,7 +29,9 @@ Use the designated Coordinator conversation as the entry point on each developme
 | Developer | Implement one verifiable slice in its assigned worktree. Keep callers, data contracts, and consumers consistent. Update affected developer docs and record actual checks in the active change. | Give the Coordinator the base and revision or patch, affected components, evidence and skipped checks. |
 | Reviewer | Independently inspect the exact diff against the request, applicable scenarios and evidence. Exercise affected workflows where permitted. | Report findings by impact, with locations and consequences. Route ambiguous requirements to the Architect and defects to the Developer. Recheck material fixes. |
 
-Use role-based agent names, adding a scope when needed, such as `developer_import`. Parallelize independent assignments. Give concurrent writers distinct ownership and worktrees; integrate the agreed planning artifacts before handing off implementation. For a change spanning hosts, name one Coordinator to integrate the revisions. Assign a single writer for shared task and evidence files during each batch. Other Developers return their scenario results for that writer to record. If separate agents are unavailable, keep the steps distinct and disclose when review was a self-check. For Codex hosts, four optional role profiles live in [assets/agents](assets/agents/).
+Use the host's available delegation tools or separate agent sessions. Pass the role and handoff from the table, and give the session the installed skill path if it cannot discover the skill from its checkout. Use role-based agent names where supported, adding a scope when needed, such as `developer_import`. Run independent assignments in parallel where supported. If a separate reviewer is unavailable, perform and report a self-check. Codex hosts can use the optional [role profiles](assets/agents/).
+
+Give concurrent writers distinct ownership and worktrees. Integrate the agreed planning artifacts before handing off implementation. For a change spanning hosts, name one Coordinator to integrate the revisions. Assign a single writer for shared task and evidence files during each batch. Other Developers return their scenario results for that writer to record.
 
 Use the host’s model and reasoning settings for each role. Where the owner has set a usage threshold, check the available allowance before substantial parallel work and report a low balance once per quota window. Keep account-specific preferences in the host configuration.
 

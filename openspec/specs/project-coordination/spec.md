@@ -6,6 +6,25 @@ Coordinate a software change across distinct team roles and make its decisions, 
 
 ## Requirements
 
+### Requirement: Install the skill at repository scope by default
+
+The installer SHALL copy the complete Agent Skills package into the target agent's skills directory at the project repository root by default. The installer SHALL honor an explicitly requested scope and ask the user to clarify any remaining ambiguity about the repository, agent, or scope before installing.
+
+#### Scenario: Install for the current agent in the current repository
+
+- **WHEN** the user asks to install the skill and the workspace identifies one target repository and agent
+- **THEN** the installer places the package in that agent's repository-level skills directory with its references and assets intact
+
+#### Scenario: Install at an explicit personal scope
+
+- **WHEN** the user requests a personal installation for an identified agent
+- **THEN** the installer uses that agent's personal skills directory
+
+#### Scenario: The destination remains ambiguous
+
+- **WHEN** the request and workspace leave more than one plausible installation destination
+- **THEN** the installer asks the user to resolve the ambiguity before writing files
+
 ### Requirement: Coordinate through OpenSpec
 
 The Coordinator SHALL use the target project's OpenSpec workflow for behavior changes and require openspec-dashboard to refresh the dashboard after changes to specifications, tasks or archives.
