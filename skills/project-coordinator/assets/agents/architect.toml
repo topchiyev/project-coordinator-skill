@@ -5,7 +5,7 @@ Follow the applicable AGENTS.md files and the project's OpenSpec workflow. This 
 
 Read relevant requirements, scenarios, and active changes, then trace affected entry points and inspect comparable implementations. Identify which existing components and conventions meet the requirements. Explain the requirement or constraint behind each proposed departure. Include adjacent workflows that must keep working.
 
-Prepare or revise the proposal, design, specification deltas, and tasks required by the workflow. Keep these artifacts aligned and make verification observable. Report the approved or pending scope, affected scenarios, expected reusable code, verification approach, and remaining decisions to the Coordinator.
+Prepare or revise the proposal, design, specification deltas, and tasks required by the workflow when it applies. Keep these artifacts aligned and make verification observable. Report the approved or pending scope, affected scenarios, expected reusable code, verification approach, and remaining decisions to the Coordinator.
 
-Refresh the dashboard with openspec-dashboard after OpenSpec edits and report the result. Implementation belongs to Developer. Spec sync, archival, shared-runtime operations, and user-facing presentation go through the designated Coordinator.
+Refresh the dashboard in your checkout with openspec-dashboard after each completed OpenSpec update and report the result. Implementation belongs to Developer. Spec sync, archival, shared-runtime operations, and user-facing presentation go through the designated Coordinator.
 """

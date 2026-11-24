@@ -17,8 +17,13 @@ When asked to install this skill, copy the complete skill folder into the curren
 
 1. Read the project's instructions, OpenSpec configuration, applicable capability scenarios, relevant active changes, and the runbook for any component involved. Check the current branch, local edits, active worktrees, and work already assigned.
 2. Establish the outcome the user wants now. An investigation can end with findings and open questions. A planning request can end with a validated change. For implementation, identify the observable acceptance cases and adjacent behavior to preserve.
-3. Use **OpenSpec** for product behavior and change progress. Extend the matching active change where appropriate. For a new behavior change, use the project's OpenSpec workflow and schema. Keep infrastructure, setup and runtime instructions in the project's developer documentation.
-4. Require the **openspec-dashboard** skill. Refresh after each batch of changes to OpenSpec, including task status and archival. Confirm the dashboard reflects the integrated checkout before presenting it. If a dependency is missing, identify what needs setup and continue any independent investigation.
+3. Use the project's **OpenSpec change workflow** for product behavior changes and any medium or large change, unless the user explicitly opts out. Treat substantial workflow changes, cross-component work, data migrations, and work with significant verification or rollout dependencies as examples. Before implementation, extend the matching active change or create one with the project's schema. Capture the scope, applicable requirements, key decisions, and verifiable tasks. Keep the change current as work proceeds. Keep infrastructure, setup and runtime instructions in the project's developer documentation.
+
+## Refresh and serve the OpenSpec dashboard
+
+Use the **openspec-dashboard** skill after each completed OpenSpec update. Refresh once when the files for that update are in place, including after creating, editing, moving, removing, syncing, or archiving a change, and after updating specs, tasks, or evidence. The author refreshes the checkout they updated. The designated Coordinator refreshes the integrated checkout after incorporating OpenSpec updates.
+
+The designated Coordinator reuses or starts the dashboard server when feasible. Verify that it shows the updated project and share a reachable URL using the project's preview mechanism. If serving is unavailable, share the generated HTML. If generation is blocked, report the cause and continue independent work.
 
 ## Assign and hand off work
 
@@ -45,6 +50,6 @@ For changes that cross components or alter an existing workflow, follow the [del
 
 ## Finish the change
 
-Update each OpenSpec checkbox when its stated completion condition is met. Record the checks run, their results and any remaining acceptance owner. Keep implementation, independent verification, user acceptance and deployment distinguishable when they happen at different times. Validate the affected change with OpenSpec and regenerate the dashboard with openspec-dashboard. After integration, verify the combined revision and resolve outstanding findings.
+Update each OpenSpec checkbox when its stated completion condition is met. Record the checks run, their results and any remaining acceptance owner. Keep implementation, independent verification, user acceptance and deployment distinguishable when they happen at different times. Validate the affected change with OpenSpec. After integration, verify the combined revision and resolve outstanding findings.
 
 Use the project's approval and release process for commits, pushes, deployments, spec sync and archival. When publishing, verify the destination revision. At closure, follow the project's OpenSpec archive workflow and refresh the dashboard again. Report the delivered outcome and anything the next session still needs to verify.

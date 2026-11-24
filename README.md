@@ -57,6 +57,6 @@ Paths are relative to the repository root. Add `project-coordinator/` under the 
 
 > Use the project-coordinator skill to plan the import retry change. Find the current entry point, record what happens after a partial failure, and bring me any decisions about duplicate imports before implementation.
 
-For an implementation request, point the Coordinator at the approved OpenSpec change. Ask it to show the dashboard to see which checks have passed and what still needs acceptance.
+The Coordinator opens or reuses an OpenSpec change before medium or large work unless you ask to skip the change workflow. It refreshes the dashboard after each OpenSpec update and serves it when possible so you can see progress and pending acceptance.
 
 The Coordinator uses your session settings and selects models and effort for delegated roles from the options available to your agent. [Model selection guide](skills/project-coordinator/references/model-selection.md)
