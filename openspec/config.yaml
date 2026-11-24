@@ -1,0 +1,4 @@
+schema: spec-driven
+context: |
+  This repository distributes a portable agent skill for coordinating software projects.
+  Keep workflow instructions independent of any application, private service, or host.
