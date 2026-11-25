@@ -2,7 +2,7 @@
 name: project-coordinator
 description: Coordinate software delivery with a designated Coordinator, an Architect, a Developer, and an independent Reviewer. Use for team planning, implementation handoffs, review, verification, and shared previews in projects using OpenSpec and openspec-dashboard.
 metadata:
-  version: "0.2.1"
+  version: "0.2.2"
 ---
 
 # Project coordinator
@@ -38,7 +38,7 @@ Use the host's available delegation tools or separate agent sessions. Pass the r
 
 Give concurrent writers distinct ownership and worktrees. Integrate the agreed planning artifacts before handing off implementation. For a change spanning hosts, name one Coordinator to integrate the revisions. Assign a single writer for shared task and evidence files during each batch. Other Developers return their scenario results for that writer to record.
 
-Keep the Coordinator on the user's selected model and effort. Before dispatching other roles, use the [model selection guide](references/model-selection.md) to choose an available frontier model at high effort for the Architect and Reviewer, and a capable workhorse at medium effort for the Developer. Where the owner has set a usage threshold, check the available allowance before substantial parallel work and report a low balance once per quota window. Keep account-specific preferences in the host configuration.
+Keep the Coordinator on the user's selected model and effort. Use the [model selection guide](references/model-selection.md) to choose an available frontier model at high effort for the Architect and Reviewer, and a capable workhorse at medium effort for the Developer. After selection, tell the user which model and effort each assigned role will use before dispatch. Where the owner has set a usage threshold, check the available allowance before substantial parallel work and report a low balance once per quota window. Keep account-specific preferences in the host configuration.
 
 For changes that cross components or alter an existing workflow, follow the [delivery guide](references/delivery.md). Prefer working patterns already in the project. Share an abstraction when it keeps current callers consistent or removes substantial duplication. Give a concrete reason for introducing an alternative.
 

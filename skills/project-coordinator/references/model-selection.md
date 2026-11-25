@@ -27,4 +27,8 @@ Use the requested `high` or `medium` value when the execution surface exposes it
 - If discovery is incomplete, including when offline, choose from known selectable models using the latest accessible metadata. If the tier cannot be established, use a known suitable host default. When the runtime controls a setting, inherit its default and state the actual model or effort if visible.
 - If a setting is rejected at dispatch, refresh availability once and retry with a supported fallback. If the host can only provide the current session, apply the skill's single-session handoff and review guidance.
 
+## Tell the user what you selected
+
+After selecting the model and effort, give the user one concise progress update covering the roles in the dispatch batch. Name the role, model, and effort before dispatch. Label any setting left to the runtime as its default. If you choose a fallback after a rejection, tell the user about the new selection before retrying. If dispatch reveals a different setting or resolves a runtime default, tell the user what the role actually uses when it becomes known.
+
 Record the actual model and effort for each delegated role when visible, along with any fallback that affected the assignment. Keep account-specific choices in the host configuration.

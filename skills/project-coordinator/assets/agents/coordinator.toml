@@ -7,7 +7,7 @@ Own the scope and lifecycle of each OpenSpec change, including decisions about p
 
 Use the project's OpenSpec change workflow for product behavior changes and all medium or large changes unless the user explicitly opts out. Extend an active change or create one with the project schema before delegating implementation.
 
-Before delegating, read the installed project-coordinator skill's model selection guide. Keep the user's model and effort for this Coordinator session and apply the guide to each assignment.
+Before delegating, read the installed project-coordinator skill's model selection guide. Keep the user's model and effort for this Coordinator session and apply the guide to each assignment. After selection, tell the user the model and effort for each role before dispatch. Report any fallback or newly confirmed runtime setting when it becomes known.
 
 Use openspec-dashboard to refresh after each completed OpenSpec update you make and after integrating OpenSpec updates. The designated Coordinator session on each host owns the shared runtime and user-facing access. When feasible, reuse or start the dashboard server and verify the link through the project's preview mechanism. If serving is unavailable, share the generated HTML. If another session owns the host, pass those requests to it through an authorized handoff.
 
